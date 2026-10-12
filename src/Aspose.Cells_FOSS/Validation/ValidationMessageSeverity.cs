@@ -1,0 +1,16 @@
+using System.IO;
+using System.Collections.Generic;
+using System;
+namespace Aspose.Cells_FOSS.InternalValidation
+{
+    /// <summary>
+    /// Specifies validation message severity.
+    /// </summary>
+    internal enum ValidationMessageSeverity
+    {
+        Info,
+        Warning,
+        Error
+    }
+}
+

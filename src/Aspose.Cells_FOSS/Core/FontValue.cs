@@ -1,0 +1,71 @@
+using System.IO;
+using System;
+using System.Collections.Generic;
+using Aspose.Cells_FOSS;
+
+namespace Aspose.Cells_FOSS.Core
+{
+    /// <summary>
+    /// Represents font value.
+    /// </summary>
+    internal sealed class FontValue
+    {
+        /// <summary>
+        /// Gets or sets the name.
+        /// </summary>
+        public string Name { get; set; } = "Calibri";
+        /// <summary>
+        /// Gets or sets the size.
+        /// </summary>
+        public double Size { get; set; } = 11d;
+        /// <summary>
+        /// Gets or sets a value indicating whether bold.
+        /// </summary>
+        public bool Bold { get; set; }
+        /// <summary>
+        /// Gets or sets a value indicating whether italic.
+        /// </summary>
+        public bool Italic { get; set; }
+        /// <summary>
+        /// Gets or sets the underline type.
+        /// </summary>
+        public FontUnderlineType Underline { get; set; }
+        /// <summary>
+        /// Gets or sets a value indicating whether strike through.
+        /// </summary>
+        public bool StrikeThrough { get; set; }
+        /// <summary>
+        /// Gets or sets the color.
+        /// </summary>
+        public ColorValue Color { get; set; }
+        /// <summary>
+        /// Gets or sets the OOXML font family value (the &lt;family val="..."/&gt; element).
+        /// </summary>
+        public int? Family { get; set; }
+        /// <summary>
+        /// Gets or sets the OOXML font scheme binding (the &lt;scheme val="..."/&gt; element).
+        /// </summary>
+        public FontSchemeType Scheme { get; set; }
+
+        /// <summary>
+        /// Creates a copy of the current instance.
+        /// </summary>
+        /// <returns>The font value.</returns>
+        public FontValue Clone()
+        {
+            return new FontValue
+            {
+                Name = Name,
+                Size = Size,
+                Bold = Bold,
+                Italic = Italic,
+                Underline = Underline,
+                StrikeThrough = StrikeThrough,
+                Color = Color,
+                Family = Family,
+                Scheme = Scheme,
+            };
+        }
+    }
+}
+

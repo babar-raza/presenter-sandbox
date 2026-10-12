@@ -1,0 +1,35 @@
+using System.IO;
+using System;
+using System.Collections.Generic;
+
+namespace Aspose.Cells_FOSS.Core
+{
+    /// <summary>
+    /// Represents row model.
+    /// </summary>
+    internal sealed class RowModel
+    {
+        /// <summary>
+        /// Gets or sets the height.
+        /// </summary>
+        public double? Height { get; set; }
+        /// <summary>
+        /// Gets or sets a value indicating whether the row@customHeight flag is set. When false, Excel
+        /// treats the stored height as a cached auto-fit value and re-derives it on render.
+        /// </summary>
+        public bool CustomHeight { get; set; }
+        /// <summary>
+        /// Gets or sets a value indicating whether hidden.
+        /// </summary>
+        public bool Hidden { get; set; }
+        /// <summary>
+        /// Gets or sets the style index.
+        /// </summary>
+        public int? StyleIndex { get; set; }
+        /// <summary>
+        /// Gets or sets the resolved style value for the row metadata.
+        /// </summary>
+        public StyleValue Style { get; set; }
+    }
+}
+
